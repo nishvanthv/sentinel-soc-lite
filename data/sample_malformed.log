@@ -1,0 +1,5 @@
+2026-11-05 09:00:00 username=admin ip=192.168.1.10 status=FAILED
+this is not a valid authentication event
+2026-11-05 09:01:00 username=alice ip=999.2.3.4 status=SUCCESS
+2026-02-30 09:02:00 username=bob ip=192.0.2.12 status=FAILED
+2026-11-05 09:03:00 username=carol ip=192.0.2.12 status=UNKNOWN
