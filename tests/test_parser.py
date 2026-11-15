@@ -1,6 +1,6 @@
 import tempfile
 import unittest
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 
 from src.log_parser import parse_lines, parse_log
@@ -13,7 +13,7 @@ class LogParserTests(unittest.TestCase):
         )
         self.assertEqual(malformed, [])
         self.assertEqual(len(events), 1)
-        self.assertEqual(events[0].timestamp, datetime(2026, 11, 5, 9))
+        self.assertEqual(events[0].timestamp, datetime(2026, 11, 5, 9, tzinfo=timezone.utc))
         self.assertEqual(events[0].ip, "192.168.1.10")
         self.assertEqual(events[0].username, "admin")
         self.assertEqual(events[0].status, "FAILED")
